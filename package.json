@@ -38,8 +38,9 @@
     "LICENSE"
   ],
   "scripts": {
+    "test": "node --experimental-strip-types --test test/index.test.ts",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm pack --dry-run"
+    "check": "npm run typecheck && npm test && npm pack --dry-run"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",

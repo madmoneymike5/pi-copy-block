@@ -7,9 +7,10 @@
     "types": ["node"],
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": true,
     "noEmit": true,
     "skipLibCheck": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["*.ts"]
+  "include": ["*.ts", "test/**/*.ts"]
 }
