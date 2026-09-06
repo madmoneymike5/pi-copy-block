@@ -1,0 +1,21 @@
+name: Review Stack
+# review-stack-control: runtime mirror rollout verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  review-stack:
+    uses: madmoneymike5/review-stack-runtime/.github/workflows/review-stack.yml@v1
+    with:
+      native-command: >-
+        npm ci --ignore-scripts && npm run typecheck
+      central-ref: v1
+      opengrep-excludes: ""
+      gitleaks-excludes: |-
+        
