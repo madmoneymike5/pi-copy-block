@@ -16,3 +16,6 @@ jobs:
       native-command: >-
         npm ci --ignore-scripts && npm run typecheck
       central-ref: v1
+      opengrep-excludes: ""
+      gitleaks-excludes: |-
+        
